@@ -1,0 +1,27 @@
+name: PR Conventions
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  check-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR title is not empty
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+          ACTOR: ${{ github.actor }}
+        run: |
+          # Allow Dependabot PRs
+          if [[ "$ACTOR" == "dependabot[bot]" ]]; then
+            echo "✓ Dependabot PR allowed"
+            exit 0
+          fi
+
+          # Ensure title is non-empty and meaningful
+          if [[ -z "$TITLE" ]]; then
+            echo "HARD FAIL: PR title must not be empty"
+            exit 1
+          fi
+
+          echo "✓ PR title: $TITLE"

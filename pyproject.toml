@@ -1,0 +1,16 @@
+[project]
+name = "turian-skills"
+version = "0.1.0"
+description = "Turian's personal skills for Claude Code"
+requires-python = ">=3.11"
+dependencies = [
+    "pymarkdownlnt>=0.9.0",
+    "pyyaml>=6.0",
+    "pydot>=3.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["scripts"]

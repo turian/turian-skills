@@ -1,0 +1,19 @@
+.aider*
+
+# Local dogfooding setup (symlinks to skills/)
+.claude/
+
+# Python virtual environment (created by uv)
+.venv/
+
+# Python cache directories
+__pycache__/
+*.pyc
+
+# Pytest cache
+.pytest_cache/
+
+# Editor swap files
+*.swp
+*.swo
+*~

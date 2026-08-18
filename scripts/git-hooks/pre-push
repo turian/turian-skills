@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+echo '→ Running make validate (pre-push)...'
+make validate
+echo '✓ Pre-push validation passed'
