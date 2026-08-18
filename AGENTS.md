@@ -20,6 +20,7 @@ ln -s ../../skills/* .claude/skills/
 ## Reference Documents
 
 - [Best Practices for Writing Skills](docs/llm/best-practices-for-writing-skills.md) — tool-agnostic skill authoring
+- [Cross-Agent Skill Placement](docs/llm/cross-agent-skill-placement.md) — where a skill must sit for Claude Code and Codex to both load it
 
 ## Validation
 
