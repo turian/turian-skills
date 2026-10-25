@@ -2,6 +2,8 @@ version: 2
 updates:
   # Python dependencies (uv/pip)
   - package-ecosystem: "pip"
+    cooldown:
+      default-days: 14
     directory: "/"
     schedule:
       interval: "weekly"
@@ -13,6 +15,8 @@ updates:
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
+    cooldown:
+      default-days: 14
     directory: "/"
     schedule:
       interval: "weekly"
